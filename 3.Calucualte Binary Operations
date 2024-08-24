@@ -1,0 +1,29 @@
+"""Calculate Binary Operations
+Write a function CalculateBinaryOperations(str) that accepts the string as an argument or parameter. The string should contains the binary numbers with their operators OR, AND, and XOR?
+A Means the AND Operation.
+B Means the OR Operation.
+C Means the XOR Operation.
+By scanning the given string from left to right you’ve to calculate the string and by taking one operator at a time then return the desired output.
+Conditions:
+The priority of the operator is not required. The length of the string is always Odd.
+If the length of the string is null then return -1. Sample Test Case:
+nput:
+1C0C1C1A0B1
+Output:
+1
+Explanation:
+The enteredinputstringis1XOR0XOR1XOR1AND0OR1.
+Now calculate the string without an operator priority and scan the string characters from left to right. Now calculate the result and return the desired output.
+Note: This will convert the char into the num (char – ‘0’) in the c++ language."""
+
+
+s=input()
+boolean_val=int(s[0])
+for i in range(1,len(s)-1):
+    if(s[i]=='A'):
+        boolean_val=boolean_val&int(s[i+1])
+    elif(s[i]=='B'):
+        boolean_val=boolean_val|int(s[i+1])
+    elif(s[i]=='C'):
+        boolean_val=boolean_val&int(s[i+1])
+print(boolean_val)
