@@ -1,0 +1,16 @@
+"""input:11101011110
+output:CAB"""
+n=input()
+length=0
+while(length<len(n)):
+    count=0
+    for i in range(length,len(n)):
+        if n[i]=="1":
+            count+=1
+        else:
+            break
+    length+=count
+    if(count>0):
+        print(chr(64+count),end="")
+    length+=1
+  
