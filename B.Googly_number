@@ -1,0 +1,22 @@
+"""
+input:43
+output:googly number
+if sum of digits of a number is a prime number then the number is googly number"""
+
+def isprime(n):
+    i=n//2
+    while(i>2):
+        if(n%i==0):
+            return 0
+        i-=1
+    return 1
+        
+n=int(input())
+sum_of_digits=sum(list(map(int,str(n))))
+
+print(sum_of_digits)
+if(isprime(sum_of_digits)):
+    print("googly number")
+else:
+    print("not googly number")
+    
