@@ -1,0 +1,26 @@
+#maximum times a playlist is repeated in given k consecutive songs
+"""
+favorite song is 'a'.
+input:
+Abcababc
+3
+output:
+2
+[Abc,bca,cab,aba,abc]
+a is repeated twice in aba so return count of maximum a's in a split of 3 consecutive charecters"""
+
+n=input()#enter string of playlist
+n=n.lower()
+print(n)
+k=int(input())#enter the k consecutive number
+count=0
+count_final=0
+for i in range(0,len(n)-k):
+    for i in range(i,i+k):
+        if(n[i]=='a'):
+            count+=1
+    if(count>count_final):
+        count_final=count
+        count=0
+print(count_final)
+        
