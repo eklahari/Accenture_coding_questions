@@ -1,0 +1,13 @@
+"""4. Find Maximum In An Array
+Write a function FindMaxInArray, which will find the greatest number
+from an array with its desired index? 
+The greatest number and its desired index should be printed in separate lines.
+Sample Test Case:
+Input:
+10 15789617206514361820 Output:
+96
+2"""
+
+size=int(input())
+arr=list(map(int,input().split(" ")))
+print(max(arr),"\n",arr.index(max(arr)))
