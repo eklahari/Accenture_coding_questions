@@ -1,0 +1,20 @@
+"""5. Operation Choices
+Write a function OperationChoices(c, a, b) which will accept three integers as an argument, and the function will return:
+(a + b) if the value of c=1. (a – b) if the value of c=2. (a * b) if the value of c=3. (a/b)ifthevalueofc=4.
+Sample Test Case: Input:
+2
+15
+20
+Output:
+-5
+"""
+
+c,a,b=map(int,input().split(" "))
+if(c==1):
+    print(a+b)
+elif(c==2):
+    print(a-b)
+elif(c==3):
+    print(a*b)
+elif(c==4):
+    print(a/b)
