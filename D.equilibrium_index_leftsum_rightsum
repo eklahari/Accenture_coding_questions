@@ -1,0 +1,23 @@
+#find equilibrium index where sum of left side elements is eual to right side elements
+"""
+input:7
+-7 1 5 2 -4 3 0
+output:
+3
+(sum(-7+1+5)==sum(-4+3+0))
+index of 2 is 3
+"""
+
+n=int(input())#enter arr size
+arr=list(map(int,input().split(" ")))
+flag=0
+for i in range(0,n):
+    #print(arr[:i],"-",arr[i+1:])
+    #print(sum(arr[:i]),"----",sum(arr[i+1:]))
+    if(sum(arr[:i])==sum(arr[i+1:])):
+        print(i)
+        flag=1
+        break
+if(flag==0):
+    print("-1")
+    
