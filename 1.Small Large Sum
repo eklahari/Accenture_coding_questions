@@ -1,0 +1,16 @@
+import math
+n=int(input())
+arr=list(map(int,input().split(" ")))
+print(arr)
+el=[p for index,p in enumerate(arr) if index%2==0 ]
+ol=[p for index,p in enumerate(arr) if index%2!=0]
+el=list(set(el))
+ol=list(set(ol))
+el.sort()
+ol.sort()
+print(el,ol)
+if(len(el)>1 and len(ol)>1):
+    val=el[-2]+ol[-2]
+    print(val)
+else:
+    print(0)
