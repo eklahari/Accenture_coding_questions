@@ -1,0 +1,31 @@
+"""8. Product Small Pair
+Write a function Productsmallpair(sum, arr) which will accept the two integers sum and arr. These two integers will be used to find the arr(j) and arr(k) where k is not equal to j.arr(j) and arr(k). k != j.arr(j) and arr(k) should be the smallest elements from the array.
+Rules:
+If the value of n<2 or empty, then return -1.
+If these pairs are not found then return the value as 0.
+You should make sure that all the values are between the range of integers.
+Sample Test Case 1
+Input:
+sum: 9 arr:5423917 Output:
+2
+Solution:
+From the given array of integers, you’ve to select the two smallest integers which are 1 and 2. The addition of these two numbers is (1 + 2 =3)whichislessthan9(3<9).Andtheproductofthesetwois2(2x1 =2)so,theoutputwegetis2.
+Sample Test Case 2: Input:
+sum: 4 arr:98-7393 Output:
+-21
+"""
+
+
+sum_val=int(input())
+arr=list(map(int,input().split(" ")))
+arr.sort()
+print(arr)
+if(len(arr)>=2):
+    flag=0
+    for i in range(len(arr)-1):
+        if arr[i]+arr[i+1]<sum_val:
+            flag=1
+            print(arr[i]*arr[i+1])
+            break
+    else:
+        print(-1)
