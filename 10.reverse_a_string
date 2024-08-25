@@ -1,0 +1,21 @@
+"""
+10. Reverse a String
+Write a function that will accept strings from the user and will reverse the string word-wise. The last word will come as the first word in the output and vice versa?
+Sample Test Case 1: Input:
+terv pro
+Output:
+pro terv
+Explanation:
+The reverse string word-wise function is applied.
+Sample Test Case 2:
+Input:
+Welcome to Sunday samayal Output:
+samayal Sunday to Welcome"""
+
+words=list(input().split(" "))
+#print(words)
+result_str=""
+for i in range(len(words)-1,-1,-1):
+    print(words[i],end=" ")
+#words.reverse()
+#print(" ".join(words))
