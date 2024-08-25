@@ -1,0 +1,31 @@
+"""
+7. Anagram Strings
+Write a function to check whether the given strings are anagrams or not. If the given strings are anagram then return ‘yes’ otherwise return ‘no’?
+Sample Test Case 1: Input:
+1st: learn
+2nd: simple Output:
+no
+
+ 
+Sample Test Case 2: Input:
+1st: Listen
+2nd: Silent
+Output:
+yes
+Explanation:
+The two strings Listen and Silent are anagrams because rearranging all the characters from the second string forms the first string.
+
+"""
+str1=input().lower()
+str2=input().lower()
+str1=[x for x in str1]
+str2=[x for x in str2]
+str1.sort()
+str2.sort()
+str1="".join(str1)
+str2="".join(str2)
+print(str1,str2)
+if(str1==str2):
+    print("Yes")
+else:
+    print("No")
