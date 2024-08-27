@@ -1,0 +1,6 @@
+#string permutations
+from itertools import permutations
+def string_permutations(s):
+    return ["".join(p) for p in permutations(s)]
+string = input("Enter a string: ")
+print("All permutations:", string_permutations(string))
