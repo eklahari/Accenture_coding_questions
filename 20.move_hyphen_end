@@ -1,0 +1,14 @@
+#move hyphens to front
+"""
+output:
+helllo-how-are-you
+helllohowareyou
+---helllohowareyou
+"""
+s=input()
+resultant_str=""
+hyphen_count=s.count("-")
+resultant_str="".join([x for x in s if x!="-" ])
+#print(resultant_str)
+resultant_str="-"*hyphen_count+resultant_str
+print(resultant_str)
