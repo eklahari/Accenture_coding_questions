@@ -1,10 +1,11 @@
 #16. Write a program to find the length of the longest common subsequence between two strings.
 """
 potato tomato
-length of s16
-length of s26
+length of s1 6
+length of s2 6
 length= 4
 """
+
 def longest_common_subsequence(s1,s2,m,n):
     dp=[[0]*(n+1) for _ in range(m+1)]
     for i in range(1,m+1):
